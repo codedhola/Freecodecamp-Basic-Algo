@@ -19,7 +19,7 @@ function sumAll(arr) {
   
     }
 
-
+module.exports = sumAll
 
 //FREECODECAMP SOLUTION 1
 

@@ -1,0 +1,22 @@
+{
+  "name": "freecodecamp-basic-algo",
+  "version": "1.0.0",
+  "description": "This repo is based on my Practise on Algorithm on freecodecamp",
+  "main": "destroyer.js",
+  "scripts": {
+    "test": "jest --coverage" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedhola/Freecodecamp-Basic-Algo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codedhola/Freecodecamp-Basic-Algo/issues"
+  },
+  "homepage": "https://github.com/codedhola/Freecodecamp-Basic-Algo#readme",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}
