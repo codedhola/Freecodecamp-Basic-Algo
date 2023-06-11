@@ -1,0 +1,30 @@
+{
+  "name": "freecodecamp-basic-algo",
+  "version": "1.0.0",
+  "description": "Algorithm",
+  "main": "boowho.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedhola/Freecodecamp-Basic-Algo.git"
+  },
+  "keywords": [
+    "algorithm",
+    "datastructure",
+    "DSA"
+  ],
+  "author": "codedhola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codedhola/Freecodecamp-Basic-Algo/issues"
+  },
+  "homepage": "https://github.com/codedhola/Freecodecamp-Basic-Algo#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
