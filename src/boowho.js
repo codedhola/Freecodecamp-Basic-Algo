@@ -2,20 +2,20 @@
 // Boolean primitives are true and false.
 
 function booWho(bool) {
-    if(bool === true || bool === false){
-      return true
-    }
-    return false
+  if (bool === true || bool === false) {
+    return true;
   }
-  console.log(booWho(null));
-  
-  // FREECODECAMP
-  
-  // function booWho(bool) {
-  //   return typeof bool === "boolean";
-  // }
-  
-  // // test here
-  // booWho(null);
-  
-  
+  return false;
+}
+console.log(booWho(null));
+
+module.exports = booWho;
+
+// FREECODECAMP
+
+// function booWho(bool) {
+//   return typeof bool === "boolean";
+// }
+
+// // test here
+// booWho(null);
