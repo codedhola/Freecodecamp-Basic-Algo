@@ -5,17 +5,18 @@
  */
 
 function confirmEnding(str, target) {
-    const arr = str.slice(str.length - target.length)
-    
-    return arr == target ? true : false;
-  }
-  //confirmEnding("Bastian", "n")
-  console.log(confirmEnding("Bastian", "ian"));  
-  
+  if (typeof str !== "string" || typeof target !== "string")
+    return "Both parameter needs to accept a valid string type";
+  const arr = str.slice(str.length - target.length);
 
+  return arr == target ? true : false;
+}
+//confirmEnding("Bastian", "n")
+confirmEnding("Bastian", "ian");
 
+module.exports = confirmEnding;
 
-// FIRST TRY: TOO MANY CODES 
+// FIRST TRY: TOO MANY CODES
 
 // function confirmEnding(str, target) {
 //   const test = str.length - (str.length - target.length);
@@ -25,4 +26,4 @@ function confirmEnding(str, target) {
 //   return arr == target ? true : false;
 // }
 // //confirmEnding("Bastian", "n")
-// console.log(confirmEnding("Bastian", "ian"));  
+// console.log(confirmEnding("Bastian", "ian"));

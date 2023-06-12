@@ -2,17 +2,20 @@
 // For the purpose of this exercise, you should also capitalize connecting words like the and of.
 
 function titleCase(str) {
-    const newTitle = str.split(" ");
-    const updatedTitle = [];
-    for (let st in newTitle) {
-      updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
-    }
-    return updatedTitle.join(" ");
+  if (str === "") return "";
+  const newTitle = str.split(" ");
+  const updatedTitle = [];
+  for (let st in newTitle) {
+    updatedTitle[st] =
+      newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
   }
+  return updatedTitle.join(" ");
+}
 
-  // function titleCase(str) {
-  //   return str
-  //     .toLowerCase()
-  //     .replace(/(^|\s)\S/g, L => L.toUpperCase());
-  // }
-  
+module.exports = titleCase;
+
+// function titleCase(str) {
+//   return str
+//     .toLowerCase()
+//     .replace(/(^|\s)\S/g, L => L.toUpperCase());
+// }

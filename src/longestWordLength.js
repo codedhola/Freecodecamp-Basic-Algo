@@ -1,25 +1,23 @@
 // Return the length of the longest word in the provided sentence. Your response should be a number.
 
 function findLongestWordLength(str) {
-    str = str.split(" ");
-    let test = str[0];
-    for(let i = 0;i < str.length;i++){
-      if(str[i].length > test.length){
-        test = str[i]; 
-      }
+  if (typeof str !== "string") return "Please Input a valid string";
+  str = str.split(" ");
+  let word = str[0];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].length > word.length) {
+      word = str[i];
     }
-  
-    return test.length;
   }
-  
-  console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
-  
-  
-  
-  
-  
-  
-  /**
+
+  return word.length;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+module.exports = findLongestWordLength;
+
+/**
  
     // FIRST TRY : BAD CODE 
  function findLongestWordLength(str) {
@@ -53,6 +51,3 @@ function findLongestWordLength(str) {
   
   
   **/
-  
-  
-  

@@ -9,7 +9,6 @@ Only integers greater than or equal to zero will be supplied to the function.
  
  */
 
-
 //  First hack
 /*
             function factorialize(num) {
@@ -22,7 +21,6 @@ Only integers greater than or equal to zero will be supplied to the function.
             
             console.log(factorialize(5));
 */
-
 
 // INVERSE: SECOND HACK
 /*
@@ -37,16 +35,18 @@ Only integers greater than or equal to zero will be supplied to the function.
             console.log(factorialize(5));
 */
 
-// SOLVED USING RECURSION 
+// SOLVED USING RECURSION
 
 function factorialize(num) {
-    if(num > 1){
-  
+  if (typeof num !== "number") return "Input a valid number";
+
+  if (num > 1) {
     return factorialize(num - 1) * num;
-    }else {
-      return num = 1;
-    }
+  } else {
+    return (num = 1);
   }
-  console.log(factorialize(5));
+}
 
+factorialize(5);
 
+module.exports = factorialize;

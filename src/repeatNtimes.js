@@ -4,22 +4,24 @@ Repeat a given string str (first argument) for num times (second argument). Retu
  */
 
 function repeatStringNumTimes(str, num) {
-    let repeat = "";
-    for(let i = 0; i < num;i++){
-      repeat += str
-    }
-    return repeat;
+  let repeat = "";
+  for (let i = 0; i < num; i++) {
+    repeat += str;
   }
-  console.log(repeatStringNumTimes("abc", 4));
-  
-  // USING RECURSION 
-  
-  // function repeatStringNumTimes(str, num) {
-  //   if(num <= 0){
-  //     return "";
-  //   }
-  //   return repeatStringNumTimes(str, num - 1) + str;
-    
-  // }
-  // console.log(repeatStringNumTimes("abc", 4));
-  
+  return repeat;
+}
+
+repeatStringNumTimes("abc", 4);
+
+module.exports = repeatStringNumTimes;
+
+// USING RECURSION
+
+// function repeatStringNumTimes(str, num) {
+//   if(num <= 0){
+//     return "";
+//   }
+//   return repeatStringNumTimes(str, num - 1) + str;
+
+// }
+// console.log(repeatStringNumTimes("abc", 4));
