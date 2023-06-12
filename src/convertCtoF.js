@@ -8,12 +8,13 @@ The formula to convert from Celsius to Fahrenheit is the temperature in Celsius 
 
 */
 
-// THIS ALGORITHM CONVERTS CELSIUS TO FAHRENHEIT
 function convertCtoF(celsius) {
+  if (typeof celsius === "number") {
     let fahrenheit = celsius * (9 / 5) + 32;
     return fahrenheit;
+  } else {
+    return "Invalid Input provided";
   }
-  
-console.log(convertCtoF(30));
+}
 
-
+module.exports = convertCtoF;

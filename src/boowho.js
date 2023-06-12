@@ -7,7 +7,6 @@ function booWho(bool) {
   }
   return false;
 }
-console.log(booWho(null));
 
 module.exports = booWho;
 

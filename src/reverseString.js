@@ -20,7 +20,7 @@
             console.log(reverseString("hello"));
 
 */
-            
+
 /*
 
             function reverseString(str) {
@@ -40,11 +40,15 @@
 // reverse.split(" ") * THIS TURNS A STRING TO AN ARRAY
 
 function reverseString(str) {
-    let reversedStr = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-      reversedStr += str[i];
-    }
-    return reversedStr;
-  }
+  if (typeof str !== "string") return "Please Input a valid string type";
 
-console.log(reverseString("hello world"));
+  let reversedStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
+}
+
+reverseString("hello world");
+
+module.exports = reverseString;
