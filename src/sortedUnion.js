@@ -12,18 +12,19 @@ Check the assertion tests for examples.
 
  */
 
-
 function uniteUnique(arr) {
-    const uniqueArray = []
-    
-    for(let i = 0;i < arguments.length;i++){
-      for(let j = 0;j < arguments[i].length;j++){
-        if(uniqueArray.indexOf(arguments[i][j]) === -1){
-          uniqueArray.push(arguments[i][j]) 
-        }
+  const uniqueArray = [];
+
+  for (let i = 0; i < arguments.length; i++) {
+    for (let j = 0; j < arguments[i].length; j++) {
+      if (uniqueArray.indexOf(arguments[i][j]) === -1) {
+        uniqueArray.push(arguments[i][j]);
       }
     }
-    return uniqueArray;
   }
-  
-  console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+  return uniqueArray;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+module.exports = uniteUnique;

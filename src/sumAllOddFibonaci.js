@@ -13,27 +13,28 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
  */
 
 function sumFibs(num) {
-    const fiboTotal = [0, 1]
-    let total = 0
-    for(let j = 0;j < num;j++){
-      if(fiboTotal[j] + fiboTotal[j - 1] > num) break
-      if((fiboTotal[j] / 2) !== 0){
-        fiboTotal.push(fiboTotal[j] + fiboTotal[j - 1])
-      }
-      
+  if (num <= 0) return 0;
+  const fiboTotal = [0, 1];
+  let total = 0;
+  for (let j = 0; j < num; j++) {
+    if (fiboTotal[j] + fiboTotal[j - 1] > num) break;
+    if (fiboTotal[j] / 2 !== 0) {
+      fiboTotal.push(fiboTotal[j] + fiboTotal[j - 1]);
     }
-    for(let i = 0;i < fiboTotal.length; i++){
-      if((fiboTotal[i] % 2) !== 0){
-      total += fiboTotal[i]
-      }
-    }
-    return total
   }
-  
-  console.log(sumFibs(1000))
+  for (let i = 0; i < fiboTotal.length; i++) {
+    if (fiboTotal[i] % 2 !== 0) {
+      total += fiboTotal[i];
+    }
+  }
+  return total;
+}
 
+sumFibs(1000);
 
-  /**
+module.exports = sumFibs;
+
+/**
    * 
    * 
    * function sumFibs(num) {

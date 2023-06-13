@@ -13,33 +13,33 @@ The character and its pair are paired up in an array, and all the arrays are gro
 
  */
 
-
 function pairElement(str) {
-    str = str.split('')
-    const arr = []
-    for(let i = 0;i < str.length;i++){
-      const dna = []
-      if(str[i] === "G"){
-        dna.push(str[i], 'C')
-        arr.push(dna)
-      }else if(str[i] === "C"){
-        dna.push(str[i], 'G')
-        arr.push(dna)
-      }else if(str[i] === "A"){
-        dna.push(str[i], 'T')
-        arr.push(dna)
-      }else if(str[i] === "T"){
-        dna.push(str[i], 'A')
-        arr.push(dna)
-      }
+  str = str.split("");
+  const arr = [];
+  for (let i = 0; i < str.length; i++) {
+    const dna = [];
+    if (str[i] === "G") {
+      dna.push(str[i], "C");
+      arr.push(dna);
+    } else if (str[i] === "C") {
+      dna.push(str[i], "G");
+      arr.push(dna);
+    } else if (str[i] === "A") {
+      dna.push(str[i], "T");
+      arr.push(dna);
+    } else if (str[i] === "T") {
+      dna.push(str[i], "A");
+      arr.push(dna);
     }
-    return arr;
-  } 
-  
-  console.log(pairElement("GCG"));
+  }
+  return arr;
+}
 
+pairElement("GCG");
 
-  /**
+module.exports = pairElement;
+
+/**
    * 
    * // NICE SOLUTIION FROM FREECODECAMP
    * 

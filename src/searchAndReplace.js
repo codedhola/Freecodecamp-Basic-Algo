@@ -20,24 +20,24 @@ Note: Preserve the case of the first character in the original word when you are
  * 
  */
 
-
 function myReplace(str, before, after) {
-    var index = str.indexOf(before);
-    if (str[index] === str[index].toUpperCase()) {
-      after = after.charAt(0).toUpperCase() + after.slice(1);
-    } else {
-      after = after.charAt(0).toLowerCase() + after.slice(1);
-    }
-    str = str.replace(before, after);
-  
-    return str;
+  if (str === "") return "";
+  var index = str.indexOf(before);
+  if (str[index] === str[index].toUpperCase()) {
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } else {
+    after = after.charAt(0).toLowerCase() + after.slice(1);
   }
-  
-  // test here
-  myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
-  
+  str = str.replace(before, after);
 
-  /**
+  return str;
+}
+
+// test here
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+module.exports = myReplace;
+/**
    * 
    * 
    *  SOME OTHER USEFULL FREECODECAMP EXAMPLES  
