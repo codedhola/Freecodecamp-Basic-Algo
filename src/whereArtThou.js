@@ -12,37 +12,36 @@ For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { f
  * 
  */
 
-
-
-
 function whatIsInAName(collection, source) {
-    const souceKeys = Object.keys(source);
-  
-    // filter the collection
-    return collection.filter(obj => {
-      for (let i = 0; i < souceKeys.length; i++) {
-        if (!obj.hasOwnProperty(souceKeys[i]) ||
-            obj[souceKeys[i]] !== source[souceKeys[i]]) {
-          return false;
-        }
+  const souceKeys = Object.keys(source);
+
+  // filter the collection
+  return collection.filter((obj) => {
+    for (let i = 0; i < souceKeys.length; i++) {
+      if (
+        !obj.hasOwnProperty(souceKeys[i]) ||
+        obj[souceKeys[i]] !== source[souceKeys[i]]
+      ) {
+        return false;
       }
-      return true;
-    });
-  }
-  
-  whatIsInAName(
-    [
-      { first: "Romeo", last: "Montague" },
-      { first: "Mercutio", last: null },
-      { first: "Tybalt", last: "Capulet" }
-    ],
-    { last: "Capulet" }
-  );
+    }
+    return true;
+  });
+}
 
+whatIsInAName(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ],
+  { last: "Capulet" }
+);
 
+module.exports = whatIsInAName;
 
-  // LOVED SOLUTION
-  /* 
+// LOVED SOLUTION
+/* 
 
   function whatIsInAName(collection, source) {
   // What's in a name?
