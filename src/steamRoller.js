@@ -8,23 +8,24 @@ Flatten a nested array. You must account for varying levels of nesting.
 
  */
 
-
 function steamrollArray(arr) {
-    // Recursion is the breakfast of champions. ― Don Stewart
-    var steamrolled = [];
-    for (var i = 0; i < arr.length; i++) {
-      if (Array.isArray(arr[i])) {
-        var subArray = steamrollArray(arr[i]);
-        steamrolled = steamrolled.concat(subArray);
-      } else {
-        steamrolled.push(arr[i]);
-      }
+  // Recursion is the breakfast of champions. ― Don Stewart
+  var steamrolled = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      var subArray = steamrollArray(arr[i]);
+      steamrolled = steamrolled.concat(subArray);
+    } else {
+      steamrolled.push(arr[i]);
     }
-    return steamrolled;
   }
+  return steamrolled;
+}
 
+steamrollArray([[["a"]], [["b"]]]);
 
-  /**
+module.exports = steamrollArray;
+/**
    * 1)
 function steamrollArray(arr) {
   // I'm a steamroller, baby

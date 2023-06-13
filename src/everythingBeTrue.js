@@ -14,19 +14,26 @@ Remember, you can access object properties through either dot notation or [] not
  */
 
 function truthCheck(collection, pre) {
-    for(let i = 0;i < collection.length;i++){
-      if(!collection[i][pre]){
-        return false
-      }
+  for (let i = 0; i < collection.length; i++) {
+    if (!collection[i][pre]) {
+      return false;
     }
-    return true;
   }
-  
-  console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot"));
+  return true;
+}
 
+truthCheck(
+  [
+    { name: "Quincy", role: "Founder", isBot: false },
+    { name: "Naomi", role: "", isBot: false },
+    { name: "Camperbot", role: "Bot", isBot: true },
+  ],
+  "isBot"
+);
 
+module.exports = truthCheck;
 
-  /**
+/**
    * 1)
    * function truthCheck(collection, pre) {
   // Create a counter to check how many are true.

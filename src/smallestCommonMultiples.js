@@ -11,25 +11,26 @@ For example, if given 1 and 3, find the smallest common multiple of both 1 and 3
  * 
  */
 
-
 function smallestCommons(arr) {
+  var max = Math.max(arr[0], arr[1]);
+  var min = Math.min(arr[0], arr[1]);
+  var mltple = max;
 
-    var max = Math.max(arr[0], arr[1]);
-    var min = Math.min(arr[0], arr[1]);
-    var mltple = max;
-  
-    for(var i = max; i >= min; i--){
-      if(mltple % i !== 0){
-        mltple += max; 
-        i = max;
-      } 
+  for (var i = max; i >= min; i--) {
+    if (mltple % i !== 0) {
+      mltple += max;
+      i = max;
     }
-  
-    return mltple;  
   }
 
+  return mltple;
+}
 
-  /** SOME ELEGANT SOLUTION ON FREECODECAMP
+smallestCommons([1, 5]);
+
+module.exports = smallestCommons;
+
+/** SOME ELEGANT SOLUTION ON FREECODECAMP
    * 
    * 
    * 1). 
@@ -59,7 +60,6 @@ function smallestCommons(arr) {
   }
 }
 
-smallestCommons([1, 5]);
    * 
    * 
    * 

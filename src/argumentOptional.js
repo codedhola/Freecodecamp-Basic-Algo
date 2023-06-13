@@ -21,17 +21,14 @@ If either argument isn't a valid number, return undefined.
  * 
  */
 
-
 function addTogether() {
-    const [first, second] = arguments;
-    if (typeof(first) !== "number")
-      return undefined;
-    if (arguments.length === 1)
-      return (second) => addTogether(first, second);
-    if (typeof(second) !== "number")
-      return undefined;
-    return first + second;
-  }
-  
+  const [first, second] = arguments;
+  if (typeof first !== "number") return undefined;
+  if (arguments.length === 1) return (second) => addTogether(first, second);
+  if (typeof second !== "number") return undefined;
+  return first + second;
+}
 
-  addTogether(5)(7)
+addTogether(5, 7);
+
+module.exports = addTogether;

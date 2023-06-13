@@ -11,22 +11,24 @@ Then return the rest of the array once the condition is satisfied, otherwise, ar
 
  */
 
-
 function dropElements(arr, func) {
-    let result;
-    for(let i = 0;i < arr.length;i++){
-      if(func(arr[i]) === true){ 
-        result = arr.slice(i)
-        return result
-      }
+  let result;
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i]) === true) {
+      result = arr.slice(i);
+      return result;
     }
-    return [];
   }
-  
-  console.log(dropElements([1, 2, 3, 4], function(n) {return n < 3; }));
+  return [];
+}
 
+dropElements([1, 2, 3, 4], function (n) {
+  return n < 3;
+});
 
-  /**
+module.exports = dropElements;
+
+/**
    * 
    * 
 ``1)

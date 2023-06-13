@@ -21,7 +21,6 @@ function sumPrimes(num) {
   }
   let sum = 0;
   for (let i = 2; i <= num; i++) {
-    console.log(i + " == " + isPrime(i));
     if (isPrime(i)) sum += i;
   }
   return sum;

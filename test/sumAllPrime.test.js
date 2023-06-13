@@ -1,4 +1,5 @@
 const sumPrimes = require("../src/sumAllPrime");
+
 describe("sumPrimes", () => {
   it("should calculate the sum of prime numbers less than or equal to the given number", () => {
     const inputNum = 10;
